@@ -30,7 +30,7 @@ export default function StateDetailsPage() {
   }, [stateName]);
 
   const handleEdit = async (updatedRecord) => {
-    console.log(updatedRecord);
+    
     try {
       await axios.put(`http://localhost:5000/api/covid/update/${updatedRecord._id}`, updatedRecord);
       setStateData((prevData) =>
